@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Api Potter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1>Search for :</h1>
+    <form method="post" action="index.html">
+        <input type="text" id="character" value="Character">
+        <input type="text" id="role" value="Role">
+        <input type="submit" value="Valider">
+    </form>
+
+    <h1>Quel liste souhaitez-vous voir ?</h1>
+    <div class="container" id="app">
+        <form action="index.html" method="post">
+            <input type="radio" id=roleId value="role" v-model="picked">
+            <label for="roleId">Role</label>
+
+            <input type="radio" id=houseId value="house" v-model="picked">
+            <label for="houseId">House</label>
+            <div class="list">
+                
+            </div>
+            <!-- <select name="role" id="role" v-if="picked === 'role'">
+                <option value="role1">roole1</option>
+                <option value="role2">roole2</option>
+            </select>
+            
+            <select name="house" id="house" v-if="picked === 'house'">
+                <option value="house1">house1</option>
+                <option value="house2">house2</option>
+            </select> -->
+            <input type="submit" value="Valider">
+        </form>
+        {{ picked }}
+    </div>
+    <!-- <?php ?> -->
+    <div id="information"></div>
+    <!-- <div id="tableaux"> -->
+    </div>
+
+
+    <script src="js/ajax.js"></script>
+    <script src="js/script3.js"></script>
+
+</body>
+
+</html>
